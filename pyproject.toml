@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "blog-examples"
+version = "0.0.1"
+description = ""
+authors = ["Dani Hodovic <o@o.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django-extensions = "^3.2.3"
+werkzeug = "^3.0.3"
+pylint-django = "^2.5.5"
+
+
+[tool.poetry.group.dev.dependencies]
+black = {extras = ["d"], version = "^24.4.2"}
+pylint = "^3.2.0"
+isort = "^5.13.2"
+django = "^5.0.6"
+djangorestframework = "^3.15.1"
+drf-flex-fields = "^1.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
