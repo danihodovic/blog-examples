@@ -10,6 +10,14 @@ python = "^3.11"
 django-extensions = "^3.2.3"
 werkzeug = "^3.0.3"
 pylint-django = "^2.5.5"
+drf-spectacular = "^0.27.2"
+pudb = "^2024.1"
+sox = "^1.5.0"
+drf-extra-fields = "^3.7.0"
+pytest = "^8.2.1"
+pytest-django = "^4.8.0"
+ptpython = "^3.0.27"
+python-magic = "^0.4.27"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -23,3 +31,7 @@ drf-flex-fields = "^1.0.2"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "--reuse-db --color=yes --pdbcls=pudb.debugger:Debugger"
+python_files = "tests.py test_*.py"
