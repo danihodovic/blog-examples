@@ -18,6 +18,7 @@ pytest = "^8.2.1"
 pytest-django = "^4.8.0"
 ptpython = "^3.0.27"
 python-magic = "^0.4.27"
+django-storages = {extras = ["s3"], version = "^1.14.3"}
 
 
 [tool.poetry.group.dev.dependencies]

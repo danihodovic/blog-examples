@@ -174,3 +174,5 @@ poetry.toml
 pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python
+file_uploads_in_drf/.s3
+file_uploads_in_drf/media

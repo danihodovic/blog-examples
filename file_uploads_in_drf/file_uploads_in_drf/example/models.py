@@ -1,8 +1,7 @@
 from django.core.exceptions import ValidationError
+from django.core.files.storage import storages
 from django.core.validators import FileExtensionValidator
 from django.db import models
-from sox import file_info
-from sox.core import SoxiError
 
 
 def validate_file_size(file_obj):
@@ -28,3 +27,14 @@ class Track(models.Model):
         title = self.title
         id = self.id
         return f"Track {title=} {id=}"
+
+
+class TrackS3(models.Model):
+    title = models.CharField(max_length=100)
+    artist_name = models.CharField(max_length=100)
+    file = models.FileField(null=True, blank=True, storage=storages["minio"])
+
+    def __str__(self):
+        title = self.title
+        id = self.id
+        return f"TrackS3 {title=} {id=}"
