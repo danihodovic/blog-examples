@@ -20,6 +20,7 @@ ptpython = "^3.0.27"
 python-magic = "^0.4.27"
 django-storages = {extras = ["s3"], version = "^1.14.3"}
 gunicorn = "^22.0.0"
+whitenoise = "^6.6.0"
 
 
 [tool.poetry.group.dev.dependencies]
