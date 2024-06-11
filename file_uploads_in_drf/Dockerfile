@@ -2,6 +2,8 @@ FROM python:3.11
 
 WORKDIR /app/
 
+EXPOSE 80
+
 RUN pip install --upgrade pip poetry==1.8.1
 COPY pyproject.toml poetry.lock /app/
 
