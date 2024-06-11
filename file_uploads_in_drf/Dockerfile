@@ -13,4 +13,6 @@ EOF
 
 COPY file_uploads_in_drf /app/
 
+RUN ./manage.py collectstatic --noinput
+
 CMD ["gunicorn", "-b", "0.0.0.0:80", "file_uploads_in_drf.wsgi", "--timeout", "90", "--max-requests=10000", "--max-requests-jitter=100"]
